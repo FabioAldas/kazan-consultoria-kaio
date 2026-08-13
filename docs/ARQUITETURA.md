@@ -50,6 +50,7 @@ Site institucional tipo **vitrine**. Primeiro recorte: **uma única página**. *
 | 2026-08-13 | CTA do header = primary                      | Mesmo roxo + ícone do sistema; ghost fica só no hero (“Falar conosco”). |
 | 2026-08-13 | Lead do Sobre: representante, não sócio      | Sai “Sócio e”; o cartão publicitário/professor permanece.              |
 | 2026-08-13 | Foto do Sobre = v2                           | Troca o recorte da bio; o avatar do processo ainda usa a v1.           |
+| 2026-08-13 | Vídeo do Nexo360 = Short h7-vDXBBFHE         | Embed youtube-nocookie no palco 16:9; sem legenda visível.             |
 | 2026-08-13 | Tipografia: DM Sans em todo o projeto        | Uma família só; pesos 400–700 via Google Fonts.                        |
 | 2026-08-13 | Primeira dobra no padrão Graphy              | Header 3 eixos, hero centralizado, degradê suave, CTAs pill.           |
 | 2026-08-13 | Hero sem foto da peça de marca               | Paleta e formas entram no fundo; retrato fica para o Sobre.            |
@@ -130,7 +131,7 @@ Repo público/privado, domínio e canal de contato ficam para depois.
 | Pessoa    | Kaio Henrique Dias   | Assinatura, footer, COPY completo                  |
 | Projeto   | Nexo360              | Seção própria + bloco de vídeos dele              |
 
-A consultoria e o Nexo360 são projetos diferentes. Vídeos da consultoria estão fora da vitrine por enquanto; o Nexo360 tem placeholder de vídeo sem legenda.
+A consultoria e o Nexo360 são projetos diferentes. Vídeos da consultoria estão fora da vitrine por enquanto; o Nexo360 embute o Short `h7-vDXBBFHE`, sem legenda.
 
 ## Arquitetura da página
 
@@ -169,7 +170,7 @@ Duas colunas. Headline: Prof. Kaio *Kazan*. Lead curricular em duas opacidades, 
 
 **Sexta — Nexo360** (`#nexo360`)
 
-Canvas da dobra 1: wash lilás/verde + grid de pontos, recortado por hairline. Copy centrada; baralho 9:16 com v1–v2 à esquerda e v3–v4 à direita; vídeo embaixo, centrado, sem legenda.
+Canvas da dobra 1: wash lilás/verde + grid de pontos, recortado por hairline. Copy centrada; baralho 9:16 com v1–v2 à esquerda e v3–v4 à direita; Short do Nexo360 embaixo, centrado, palco 16:9, sem legenda.
 
 **Sétima — Parcerias**
 
@@ -203,7 +204,7 @@ Princípio: biografia, oferta e processo aparecem uma vez cada. Vídeos não se 
 - Qual é a face oficial na vitrine: Prof. Kaio Kazan, Kaio Henrique Dias, ou os dois?
 - Arquivos 9:16 do baralho do Nexo360 (v1–v4 no palco; ordem/recorte ok?)
 - Vídeos Kaio voltam para a vitrine? Quando, e em qual posição (depois do porquê, depois do Sobre, outra)?
-- URL dos vídeos do Nexo360
+- O palco do Short do Nexo360 fica 16:9 (faixas) ou vira 9:16, alinhado aos baralhos?
 - Canal de contato (WhatsApp / e-mail) no footer
 - Analytics entra neste recorte?
 - Os 4 passos da Fase 2 ganham texto de apoio, ou o título sozinho basta?

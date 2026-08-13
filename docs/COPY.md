@@ -182,7 +182,7 @@ Projeto do Kaio, distinto da consultoria. Texto + bloco próprio de vídeos.
 
 **Sublabel:** Fundação do projeto — fora da UI, por enquanto.
 
-**Placeholder:** inserir vídeos do Nexo360
+**Vídeo:** [Short do Nexo360](https://youtube.com/shorts/h7-vDXBBFHE) (`h7-vDXBBFHE`)
 
 ---
 

@@ -539,7 +539,11 @@ export default function HomePage() {
               />
             </span>
           </div>
-          <VideoPlaceholder featured />
+          <VideoPlaceholder
+            featured
+            youtubeId="h7-vDXBBFHE"
+            title="Nexo360"
+          />
         </div>
       </section>
 
