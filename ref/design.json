@@ -1,0 +1,238 @@
+{
+  "$schema": "./design.schema.json",
+  "meta": {
+    "version": "0.1.0",
+    "extractedFrom": "ref/1.png … ref/7.png (WayPilot-style landing)",
+    "intent": "Norte visual da vitrine Kazan. Extraído, ainda não aplicado.",
+    "status": "extracted"
+  },
+  "sources": [
+    {
+      "file": "ref/1.png",
+      "role": "hero + chrome",
+      "mapsTo": "header, hero, CTAs",
+      "notes": "Nav pill preta flutuante; headline misto; cards translúcidos nas laterais; arco de logos embaixo; wash lilás/amarelo + grid de pontos."
+    },
+    {
+      "file": "ref/2.png",
+      "role": "prova + narrativa",
+      "mapsTo": "faixa de confiança / intro de oferta",
+      "notes": "Badge com avatares; logo cloud; parágrafo com duas opacidades e ícones inline."
+    },
+    {
+      "file": "ref/3.png",
+      "role": "produto em cena",
+      "mapsTo": "como-trabalhamos (motion)",
+      "notes": "UI de produto dentro de um palco arredondado: conversa clara + painel escuro. Motion = interface, não ilustração solta."
+    },
+    {
+      "file": "ref/4.png",
+      "role": "features 2 col",
+      "mapsTo": "o-que-fazemos / por-que",
+      "notes": "Dois palcos grandes, viz em cima, título+texto embaixo. Sem grade 3×2 apertada."
+    },
+    {
+      "file": "ref/5.png",
+      "role": " palco UI no meio da dobra",
+      "mapsTo": "hero alternativo ou processo",
+      "notes": "Headline + card de produto flutuando + parágrafo misto embaixo."
+    },
+    {
+      "file": "ref/6.png",
+      "role": "FAQ",
+      "mapsTo": "fora desta vitrine",
+      "notes": "Coluna estreita, divisórias hairline, + / ×. Muito respiro."
+    },
+    {
+      "file": "ref/7.png",
+      "role": "fecho",
+      "mapsTo": "cta #contato + footer",
+      "notes": "CTA claro no wash; footer charcoal com topo arredondado e colunas."
+    }
+  ],
+  "constraints": {
+    "keep": [
+      "Marca = Kazan só no chrome; copy fala Kaio / Nexo360",
+      "Paleta da peça: branco, texto escuro, roxo #4b2395, verde #b3d431",
+      "Copy em docs/COPY.md",
+      "Ordem das dobras já definida",
+      "Uma página, âncoras, Next.js"
+    ],
+    "steal": [
+      "Respiro e hierarquia (menos peças, maiores)",
+      "Chrome escuro compacto vs canvas claro",
+      "Headline com 1 palavra em serif itálico",
+      "Texto em duas opacidades (núcleo preto, costura cinza)",
+      "Palcos grandes com sombra macia em vez de cards densos",
+      "Motion como UI de produto, não ícones soltos",
+      "CTA duplo (ghost + sólido) e footer bloco escuro arredondado",
+      "Wash pastel + grid de pontos no fundo, nunca saturado"
+    ],
+    "neverCopy": [
+      "WayPilot, YC, NVIDIA, logos de terceiros das refs",
+      "Copy, métricas e nomes das refs",
+      "Agentes de crédito / lending como tema",
+      "Screenshot literal, pixel a pixel"
+    ]
+  },
+  "tokens": {
+    "canvas": {
+      "base": "#ffffff",
+      "text": "#0a0a0a",
+      "textMuted": "rgba(10,10,10,0.45)",
+      "textFaint": "rgba(10,10,10,0.32)",
+      "hairline": "#ededed",
+      "washLeft": "radial lavender/purple, blur alto, opacidade baixa",
+      "washRight": "radial pale yellow / Kazan green-soft, blur alto",
+      "grid": "dot grid cinza claro, baixo contraste, só no fundo",
+      "footer": "#16181d",
+      "footerMuted": "rgba(255,255,255,0.45)",
+      "kazanAccent": "#4b2395",
+      "kazanGreen": "#b3d431",
+      "note": "Nas refs o chrome é preto. Na Kazan o acento de marca continua roxo; preto é candidato a chrome (nav/footer/CTA), não a substituir o roxo da identidade."
+    },
+    "type": {
+      "sans": "DM Sans — headlines bold, body regular; única família em uso",
+      "serifAccent": "Playfair Display em --font-serif; hero usa em «execução»",
+      "heroSize": "clamp grande, 2–3 linhas, centrado",
+      "bodySize": "1–1.125rem, line-height ~1.6",
+      "mixedOpacity": "frases-núcleo ~1.0; conectivos ~0.4",
+      "inlineMarks": "ícone ou wordmark cabe no fluxo da frase, não ao lado"
+    },
+    "radius": {
+      "pill": "999px",
+      "card": "24px–32px",
+      "tile": "12px–16px",
+      "footerTop": "32px+"
+    },
+    "shadow": {
+      "card": "0 20px 50px rgba(0,0,0,0.06)",
+      "float": "0 12px 32px rgba(0,0,0,0.08)",
+      "button": "0 8px 20px rgba(0,0,0,0.12)"
+    },
+    "space": {
+      "sectionY": "6.5rem–9rem",
+      "contentMax": "64rem–72rem",
+      "faqMax": "40rem–44rem",
+      "heroMin": "alvo visual ~ viewport, sem apertar"
+    }
+  },
+  "principles": [
+    "Uma ideia por dobra; palco único no centro.",
+    "Profundidade por sombra e camadas, não por borda pesada.",
+    "UI de produto (chat, métrica, anel) conta o processo melhor que pictograma.",
+    "Dois CTAs: ghost à esquerda, sólido à direita com seta.",
+    "Grid 2 colunas para features; evitar 3×2 denso.",
+    "Footer é um bloco, não uma faixa fina."
+  ],
+  "components": {
+    "header": {
+      "shape": "pill flutuante, não barra full-bleed",
+      "surface": "preto (ref) ou roxo-deep (híbrido Kazan)",
+      "layout": "marca | nav ou wordmark | ação",
+      "behaviorOpen": "refs sugerem compacto; Kazan hoje é header estático claro — conflito registrado"
+    },
+    "hero": {
+      "stack": "badge opcional → headline misto → lead cinza → dois CTAs",
+      "ornaments": "cards translúcidos empilhados L/R, ou nada se competir com foto",
+      "background": "branco + wash dual + dot grid + arco suave opcional"
+    },
+    "trust": {
+      "badge": "pill branca, sombra, avatares ou selo curto",
+      "logoCloud": "5 marcas em linha, peso visual baixo"
+    },
+    "buttons": {
+      "ghost": "fundo branco, texto preto, hairline",
+      "solid": "preto ou roxo Kazan, texto branco, seta ↗, sombra",
+      "radius": "pill"
+    },
+    "featureCard": {
+      "anatomy": "palco (viz/motion) 60% + copy 40%",
+      "count": "2 por dobra, não 6",
+      "inner": "pills de métrica, anel, tiles flutuando"
+    },
+    "productStage": {
+      "anatomy": "card 24–32px radius, sombra, UI interna",
+      "split": "painel claro (conversa) + painel escuro (histórico/dados)",
+      "use": "Reunião 1/2 e implementação entram como cenas nesse palco"
+    },
+    "faq": {
+      "width": "coluna estreita centrada",
+      "item": "pergunta bold | + ; aberto mostra × e corpo regular",
+      "dividers": "hairline full width do container"
+    },
+    "ctaBand": {
+      "headline": "sans + 1–2 palavras serif",
+      "actions": "mesmo par do hero"
+    },
+    "footer": {
+      "surface": "carvão, cantos superiores arredondados",
+      "grid": "4 colunas, headers muted, links claros, social em tiles"
+    }
+  },
+  "folds": {
+    "hero": "1.png + 5.png (composição); 2.png (prova se houver)",
+    "o-que-fazemos": "4.png — ritmo/respiro das refs; grade permanece 3×2 com 6 frentes",
+    "como-trabalhamos": "3.png — palco aplicado na Fase 1 (dois panes); conteúdo interno ainda a editar",
+    "por-que": "mesmo envelope da oferta (ícone + título, 5 colunas); intro mista. Palcos da 4.png não cabem na copy curta",
+    "sobre": "5.png (foto como palco flutuante) + 2.png (lead duas opacidades) + 6.png (marcos em hairline)",
+    "nexo360": "1.png (canvas); copy centrada entre dois baralhos 9:16; vídeo centrado abaixo",
+    "parcerias": "2.png — logo cloud de wordmarks (sem logos de arquivo ainda); intro mista",
+    "faq": "6.png — fora deste recorte",
+    "contato-footer": "7.png — aplicado (CTA wash + footer carvão 4 colunas)"
+  },
+  "conflicts": [
+    {
+      "topic": "serif itálico no headline",
+      "refsWant": "1 palavra serif italic por título",
+      "kazanHas": "Playfair em «execução» no hero; demais textos DM Sans",
+      "decision": "hybrid"
+    },
+    {
+      "topic": "header",
+      "refsWant": "pill preta flutuante",
+      "kazanHas": "header estático claro, 3 eixos",
+      "decision": "keep-kazan"
+    },
+    {
+      "topic": "CTA sólido",
+      "refsWant": "preto + seta",
+      "kazanHas": "roxo + ícone de calendário",
+      "decision": "keep-kazan"
+    },
+    {
+      "topic": "oferta",
+      "refsWant": "2 cards grandes",
+      "kazanHas": "grade 3×2 com 6 frentes",
+      "decision": "keep-kazan"
+    },
+    {
+      "topic": "porquê",
+      "refsWant": "2 cards grandes",
+      "kazanHas": "5 frentes em fileira, envelope da oferta (ícone + título)",
+      "decision": "keep-kazan"
+    },
+    {
+      "topic": "FAQ",
+      "refsWant": "accordion centrado",
+      "kazanHas": "não existe e não entra neste recorte",
+      "decision": "keep-kazan"
+    }
+  ],
+  "rules": {
+    "must": [
+      "Ler este arquivo antes de mudar UI da landing.",
+      "Manter copy e paleta Kazan; aplicar só composição/ritmo das refs.",
+      "Tratar motion do processo como UI dentro de um palco, não como sticker.",
+      "Usar respiro de seção das refs (dobras altas, poucos objetos).",
+      "Registrar em conflicts qualquer desvio deste norte."
+    ],
+    "mustNot": [
+      "Copiar marca, texto ou logos das refs.",
+      "Voltar a polir um card isolado sem checar a dobra inteira.",
+      "Saturar o wash (lilás/verde ficam de fundo, não de peça).",
+      "Aplicar Playfair fora do acento combinado («execução» no hero).",
+      "Aplicar a página toda num único passo sem fechar os conflicts."
+    ]
+  }
+}

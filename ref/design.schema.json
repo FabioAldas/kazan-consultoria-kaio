@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kazan.local/ref/design.schema.json",
+  "title": "Kazan visual north star (extracted from ref/)",
+  "description": "Contrato de composição extraído das referências. Não é copy nem paleta da marca. Usar antes de aplicar UI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "meta",
+    "sources",
+    "constraints",
+    "tokens",
+    "principles",
+    "components",
+    "folds",
+    "rules"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["version", "extractedFrom", "intent"],
+      "properties": {
+        "version": { "type": "string" },
+        "extractedFrom": { "type": "string" },
+        "intent": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["extracted", "approved", "applied"]
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "role"],
+        "properties": {
+          "file": { "type": "string" },
+          "role": { "type": "string" },
+          "mapsTo": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["keep", "steal", "neverCopy"],
+      "properties": {
+        "keep": { "type": "array", "items": { "type": "string" } },
+        "steal": { "type": "array", "items": { "type": "string" } },
+        "neverCopy": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "tokens": {
+      "type": "object",
+      "required": ["canvas", "type", "radius", "shadow", "space"],
+      "properties": {
+        "canvas": { "type": "object" },
+        "type": { "type": "object" },
+        "radius": { "type": "object" },
+        "shadow": { "type": "object" },
+        "space": { "type": "object" }
+      }
+    },
+    "principles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "components": { "type": "object" },
+    "folds": { "type": "object" },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["topic", "refsWant", "kazanHas", "decision"],
+        "properties": {
+          "topic": { "type": "string" },
+          "refsWant": { "type": "string" },
+          "kazanHas": { "type": "string" },
+          "decision": {
+            "type": "string",
+            "enum": ["open", "adopt-ref", "keep-kazan", "hybrid"]
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "required": ["must", "mustNot"],
+      "properties": {
+        "must": { "type": "array", "items": { "type": "string" } },
+        "mustNot": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
