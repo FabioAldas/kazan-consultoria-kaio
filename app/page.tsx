@@ -470,7 +470,7 @@ export default function HomePage() {
           <div className="about__photo">
             <Image
               className="about__photo-img"
-              src="/images/foto-bio-kazan-v1.webp"
+              src="/images/foto-bio-kazan-v2.webp"
               alt="Prof. Kaio Kazan"
               fill
               sizes="(max-width: 860px) 100vw, 490px"

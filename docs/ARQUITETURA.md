@@ -49,6 +49,7 @@ Site institucional tipo **vitrine**. Primeiro recorte: **uma única página**. *
 | 2026-08-13 | Header esconde na descida, volta na subida   | Fora do `.fold` (senão o isolate prende o z-index); scrolled = `#fff` sólido. |
 | 2026-08-13 | CTA do header = primary                      | Mesmo roxo + ícone do sistema; ghost fica só no hero (“Falar conosco”). |
 | 2026-08-13 | Lead do Sobre: representante, não sócio      | Sai “Sócio e”; o cartão publicitário/professor permanece.              |
+| 2026-08-13 | Foto do Sobre = v2                           | Troca o recorte da bio; o avatar do processo ainda usa a v1.           |
 | 2026-08-13 | Tipografia: DM Sans em todo o projeto        | Uma família só; pesos 400–700 via Google Fonts.                        |
 | 2026-08-13 | Primeira dobra no padrão Graphy              | Header 3 eixos, hero centralizado, degradê suave, CTAs pill.           |
 | 2026-08-13 | Hero sem foto da peça de marca               | Paleta e formas entram no fundo; retrato fica para o Sobre.            |
@@ -164,7 +165,7 @@ Intro mista (*conosco*, lead em duas opacidades). Grade no mesmo envelope da ofe
 
 **Quinta — Sobre** (`#sobre`)
 
-Duas colunas. Headline: Prof. Kaio *Kazan*. Lead curricular em duas opacidades, três pilares em pill branca com ícone inline, quatro marcos em hairline, citação em palco com *Estratégia* em Playfair. Foto: `public/images/foto-bio-kazan-v1.webp`, cover no palco sticky. Recorte condensado; os 7 corpos ficam no COPY.
+Duas colunas. Headline: Prof. Kaio *Kazan*. Lead curricular em duas opacidades, três pilares em pill branca com ícone inline, quatro marcos em hairline, citação em palco com *Estratégia* em Playfair. Foto: `public/images/foto-bio-kazan-v2.webp`, cover no palco sticky. Recorte condensado; os 7 corpos ficam no COPY.
 
 **Sexta — Nexo360** (`#nexo360`)
 
