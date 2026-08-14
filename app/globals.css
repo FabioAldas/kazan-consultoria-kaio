@@ -103,7 +103,8 @@ a {
   transform: translateY(-100%);
 }
 
-.header--scrolled {
+.header--scrolled,
+.header--open {
   background-color: #ffffff;
   box-shadow: 0 1px 0 rgba(13, 13, 31, 0.08);
 }
@@ -2803,7 +2804,7 @@ a {
 
 .partners__intro {
   max-width: 38rem;
-  margin: 0 auto 4.25rem;
+  margin: 0 auto 2.75rem;
   text-align: center;
 }
 
@@ -2864,6 +2865,70 @@ a {
 
 .partners__mute {
   color: var(--color-text-muted);
+}
+
+.partners__featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 44rem;
+  margin: 0 auto 4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.partners__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.75rem 1.35rem 1.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background: #ffffff;
+}
+
+.partners__feature-logo {
+  display: block;
+  width: auto;
+  height: 2.65rem;
+  max-width: 11rem;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+
+.partners__feature-name {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.partners__ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.65rem;
+  padding: 0.4rem 1.15rem 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-purple);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  box-shadow: 0 8px 20px rgba(75, 35, 149, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partners__ig:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(75, 35, 149, 0.38);
+}
+
+.partners__ig svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .why__grid {
@@ -3316,6 +3381,18 @@ a {
   text-wrap: balance;
 }
 
+.nexo__mark {
+  display: inline-block;
+  width: auto;
+  height: 0.78em;
+  max-width: 8.5em;
+  margin-right: 0.06em;
+  vertical-align: -0.12em;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+
 .nexo__copy p {
   margin: 1.15rem 0 0;
   font-size: 1.125rem;
@@ -3345,7 +3422,7 @@ a {
 
 .partners {
   padding: 7.5rem 1.5rem 8rem;
-  background: var(--color-bg);
+  background: linear-gradient(180deg, #e4e4ea 0%, #ffffff 100%);
 }
 
 .partners__marquee {
@@ -3353,27 +3430,7 @@ a {
   overflow: hidden;
   margin: 0 -1.5rem;
   padding: 0.6rem 0;
-}
-
-.partners__marquee::before,
-.partners__marquee::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  width: min(40rem, 42vw);
-  pointer-events: none;
-}
-
-.partners__marquee::before {
-  left: 0;
-  background: linear-gradient(90deg, var(--color-bg), transparent);
-}
-
-.partners__marquee::after {
-  right: 0;
-  background: linear-gradient(270deg, var(--color-bg), transparent);
+  background: transparent;
 }
 
 .partners__track {
@@ -3555,6 +3612,7 @@ a {
   .nexo__deck,
   .nexo__inner > .video,
   .partners__intro,
+  .partners__feature,
   .partners__marquee,
   .partners__close,
   .cta__inner {
@@ -3579,6 +3637,7 @@ a {
   .nexo__deck.is-in,
   .nexo__inner > .video.is-in,
   .partners__intro.is-in,
+  .partners__feature.is-in,
   .partners__marquee.is-in,
   .partners__close.is-in,
   .cta__inner.is-in {
@@ -3587,7 +3646,8 @@ a {
 
   .offer__card:nth-child(2).is-in,
   .why__card:nth-child(2).is-in,
-  .process__impl-grid li:nth-child(2).is-in {
+  .process__impl-grid li:nth-child(2).is-in,
+  .partners__feature:nth-child(2).is-in {
     animation-delay: 0.07s;
   }
 
@@ -3639,6 +3699,7 @@ a {
   .nexo__deck,
   .nexo__inner > .video,
   .partners__intro,
+  .partners__feature,
   .partners__marquee,
   .partners__close,
   .cta__inner {
@@ -3762,7 +3823,15 @@ a {
 
   .header__toggle {
     display: flex;
+    grid-row: 1;
+    grid-column: 2;
     justify-self: end;
+    align-self: start;
+  }
+
+  .header--open .header__brand {
+    grid-row: 1;
+    grid-column: 1;
   }
 
   .header__nav,
@@ -3778,6 +3847,8 @@ a {
 
   .header--open .header__nav {
     flex-direction: column;
+    justify-self: stretch;
+    width: 100%;
     gap: 0;
     padding: 0.35rem 0 0.5rem;
     border-top: 1px solid var(--color-border);
@@ -3854,6 +3925,7 @@ a {
   .process__impl-grid,
   .videos__grid,
   .about__inner,
+  .partners__featured,
   .footer__inner {
     grid-template-columns: 1fr;
   }
@@ -3912,11 +3984,6 @@ a {
 
   .partners__marquee {
     margin-inline: -1.15rem;
-  }
-
-  .partners__marquee::before,
-  .partners__marquee::after {
-    width: min(5.5rem, 22vw);
   }
 
   .partners__logo {

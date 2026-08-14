@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { WHATSAPP_DIAGNOSTICO, WhatsappIcon } from "./cta-buttons";
 
 const LINKS = [
   { href: "#o-que-fazemos", label: "O que fazemos" },
@@ -36,7 +37,7 @@ export function SiteHeader() {
 
       if (open || y < 16) {
         setHidden(false);
-        setScrolled(y > 16);
+        setScrolled(open || y > 16);
         lastY = y;
         return;
       }
@@ -81,46 +82,6 @@ export function SiteHeader() {
           Kazan
         </Link>
 
-        <nav className="header__nav" id="menu-principal" aria-label="Principal">
-          {LINKS.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="header__actions">
-          <a
-            className="btn btn--primary"
-            href="#contato"
-            onClick={() => setOpen(false)}
-          >
-            <span className="btn__label">
-              Agendar<span className="header__cta-extra"> diagnóstico</span>
-            </span>
-            <span className="btn__icon" aria-hidden="true">
-              <svg viewBox="0 0 16 16" fill="none">
-                <rect
-                  x="2.5"
-                  y="3.6"
-                  width="11"
-                  height="10.2"
-                  rx="1.6"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                />
-                <path d="M2.5 7h11" stroke="currentColor" strokeWidth="1.6" />
-                <path
-                  d="M5.3 2.3v2.6M10.7 2.3v2.6"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-          </a>
-        </div>
-
         <button
           className="header__toggle"
           type="button"
@@ -133,6 +94,31 @@ export function SiteHeader() {
           <span className="header__toggle-line" aria-hidden="true" />
           <span className="header__toggle-line" aria-hidden="true" />
         </button>
+
+        <nav className="header__nav" id="menu-principal" aria-label="Principal">
+          {LINKS.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="header__actions">
+          <a
+            className="btn btn--primary"
+            href={WHATSAPP_DIAGNOSTICO}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+          >
+            <span className="btn__label">
+              Agendar<span className="header__cta-extra"> diagnóstico</span>
+            </span>
+            <span className="btn__icon" aria-hidden="true">
+              <WhatsappIcon />
+            </span>
+          </a>
+        </div>
       </div>
     </header>
   );

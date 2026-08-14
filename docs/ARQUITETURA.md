@@ -46,8 +46,13 @@ Site institucional tipo **vitrine**. Primeiro recorte: **uma única página**. *
 | 2026-08-13 | Dois blocos de vídeo, dois projetos          | Um bloco da consultoria (Kaio); outro do Nexo360.                      |
 | 2026-08-13 | Wordmark do header = só “Kazan”              | Sem tagline, sem “Consultoria”, sem nome da pessoa no chrome.          |
 | 2026-08-13 | Página tem header e footer                   | Landing profissional precisa de quadro; nav por âncoras (uma página).  |
-| 2026-08-13 | Header esconde na descida, volta na subida   | Fora do `.fold` (senão o isolate prende o z-index); scrolled = `#fff` sólido. |
+| 2026-08-13 | Header esconde na descida, volta na subida   | Fora do `.fold`; scrolled e menu aberto no mobile = `#fff` sólido.      |
 | 2026-08-13 | CTA do header = primary                      | Mesmo roxo + ícone do sistema; ghost fica só no hero (“Falar conosco”). |
+| 2026-08-14 | Primary aponta WhatsApp                      | Ícone WA; wa.me 5514… com texto de diagnóstico. Sem ghost na página.   |
+| 2026-08-14 | Parcerias sobem para depois do hero          | Prova social cedo; degradê cinza → branco; marquee sem névoa branca.   |
+| 2026-08-14 | Nexo360 entra no carrossel de parcerias      | Logo `logo-nexo-1-v1.webp`; tratamento ink (branco no preto), como a Lab. |
+| 2026-08-14 | Headline do Nexo360 usa o wordmark           | Troca o texto “Nexo360” pelo logo em preto (invert + multiply).         |
+| 2026-08-14 | Destaque Nexo + Lab nas parcerias            | Instagram: [@nexoprojeto360](https://www.instagram.com/nexoprojeto360/) e [@labstudiod](https://www.instagram.com/labstudiod/). |
 | 2026-08-13 | Lead do Sobre: representante, não sócio      | Sai “Sócio e”; o cartão publicitário/professor permanece.              |
 | 2026-08-13 | Foto do Sobre = v2                           | Troca o recorte da bio; o avatar do processo ainda usa a v1.           |
 | 2026-08-13 | Vídeo do Nexo360 = Short h7-vDXBBFHE         | Embed youtube-nocookie no palco 16:9; sem legenda visível.             |
@@ -88,7 +93,7 @@ Site institucional tipo **vitrine**. Primeiro recorte: **uma única página**. *
 | 2026-08-13 | Fase 2 card 4 = loop monitorar → ajustar     | Órbita contínua; o material do meio sofre o nudge do ajuste.           |
 | 2026-08-13 | Entrada dispara uma vez, não no scrub        | IntersectionObserver; a dobra toca 0.75s e fica. Hero e footer parados. |
 | 2026-08-13 | Baralhos do Nexo360 ocultos no mobile         | Até 720px a dobra fica copy + vídeo; leque só a partir do tablet.      |
-| 2026-08-13 | Header mobile = hambúrguer                   | Nav e Agendar entram no drawer; Escape fecha; marca fica no bar.      |
+| 2026-08-13 | Header mobile = hambúrguer                   | Nav e Agendar no drawer; o X fica no mesmo lugar do ícone, no topo.   |
 
 ## Ferramentas
 
@@ -139,46 +144,46 @@ Chrome + nove blocos de conteúdo. Copy em `docs/COPY.md`.
 
 **Chrome**
 
-- Header — wordmark à esquerda, âncoras ao centro, CTA primary à direita. Fixed; scrolled = fundo sólido.
+- Header — wordmark à esquerda, âncoras ao centro, CTA primary à direita. Fixed; scrolled e hamburger aberto = fundo sólido.
 - Footer — bloco carvão, 4 colunas, cantos superiores arredondados
 
 **Primeira dobra**
 
-Composição da `ref/1.png`: canvas com wash lilás/verde + grid de pontos, badge de eyebrow com fill roxo animado (texto estático, sem anel), **execução** em Playfair itálico, dois CTAs (ghost + roxo). Sem cards laterais nem halo. Header permanece o atual. Sem retrato.
+Composição da `ref/1.png`: canvas com wash lilás/verde + grid de pontos, badge de eyebrow com fill roxo animado (texto estático, sem anel), **execução** em Playfair itálico, um CTA (WhatsApp). Sem cards laterais nem halo. Header permanece o atual. Sem retrato.
 
 O parágrafo “Sou Kaio Henrique Dias…” ficou de fora desta dobra para não competir com a headline; entra no Sobre.
 
 **Segunda dobra (na página)**
 
-O que fazemos: intro centrada com Playfair em *prática*, lead em duas opacidades, grade 3×2 com ícone em tile (sem fundo de card nem hover) + fecho com *gerar resultados*. Âncora `#o-que-fazemos`.
+Parcerias: *parcerias* em Playfair, lead em duas opacidades, dois cards de destaque (Nexo360 e Lab Studio) com botão de Instagram, carrossel infinito (fundo transparente), fecho com *impacto*. Degradê cinza → branco. Lista do carrossel: Lab Studio, Unimar, Univem, FAIP, Nexo360.
 
 **Terceira dobra (na página)**
+
+O que fazemos: intro centrada com Playfair em *prática*, lead em duas opacidades, grade 3×2 com ícone em tile (sem fundo de card nem hover) + fecho com *gerar resultados*. Âncora `#o-que-fazemos`.
+
+**Quarta — Como trabalhamos**
 
 Como trabalhamos: intro + duas fases sem casca cinza. Headline (rótulo + Playfair); Fase 1 em dois panes — claro = carrossel de notificações (Briefing, Diagnóstico, Estratégia; centro em destaque), escuro = leitura das qualidades + proposta como produto; Fase 2 com 4 cards — envio em arco, materiais na estrutura, diagnóstico + estratégias sobre o layout, loop monitorar → ajustar. Âncora `#como-trabalhamos`.
 
 A faixa de credenciais saiu da vitrine.
 
-**Quarta — Por que trabalhar conosco**
+**Quinta — Por que trabalhar conosco**
 
 Intro mista (*conosco*, lead em duas opacidades). Grade no mesmo envelope da oferta: 3+2 (dois de baixo centrados), ícone em tile roxo-soft + título, sem palco nem número. Fecho com *investimento*. Os cinco pontos do COPY permanecem.
 
 **Vídeos Kaio** — fora da página, por enquanto. Copy permanece em `docs/COPY.md`.
 
-**Quinta — Sobre** (`#sobre`)
+**Sexta — Sobre** (`#sobre`)
 
 Duas colunas. Headline: Prof. Kaio *Kazan*. Lead curricular em duas opacidades, três pilares em pill branca com ícone inline, quatro marcos em hairline, citação em palco com *Estratégia* em Playfair. Foto: `public/images/foto-bio-kazan-v2.webp`, cover no palco sticky. Recorte condensado; os 7 corpos ficam no COPY.
 
-**Sexta — Nexo360** (`#nexo360`)
+**Sétima — Nexo360** (`#nexo360`)
 
-Canvas da dobra 1: wash lilás/verde + grid de pontos, recortado por hairline. Copy centrada; baralho 9:16 com v1–v2 à esquerda e v3–v4 à direita; Short do Nexo360 embaixo, centrado, palco 16:9, sem legenda.
-
-**Sétima — Parcerias**
-
-Ritmo da `ref/2.png`: *parcerias* em Playfair, lead em duas opacidades, carrossel infinito com névoa branca nas bordas (logos no cinza 0.42). Fecho com *impacto*. Sem Nexo360 na lista.
+Canvas da dobra 1: wash lilás/verde + grid de pontos, recortado por hairline. Copy centrada; wordmark preto no h2 no lugar do nome; baralho 9:16 com v1–v2 à esquerda e v3–v4 à direita; Short do Nexo360 embaixo, centrado, palco 16:9, sem legenda.
 
 **Oitava — CTA** (`#contato`)
 
-*Comece agora* (agora em Playfair) + corpo do COPY + os mesmos dois botões da hero (ghost + roxo). Wash lilás claro, centro quase branco.
+*Comece agora* (agora em Playfair) + corpo do COPY + o mesmo primary da hero (WhatsApp). Wash lilás claro, centro quase branco.
 
 **Footer**
 
@@ -187,17 +192,17 @@ Bloco carvão, cantos superiores arredondados, 4 colunas: Marca, Página, Projet
 **Conteúdo (página viva)**
 
 1. Hero
-2. O que fazemos
-3. Processo
-4. Por que trabalhar conosco
-5. Sobre
-6. Nexo360
-7. Parcerias
+2. Parcerias
+3. O que fazemos
+4. Processo
+5. Por que trabalhar conosco
+6. Sobre
+7. Nexo360
 8. CTA final + footer
 
 Princípio: biografia, oferta e processo aparecem uma vez cada. Vídeos não se misturam entre consultoria e Nexo360. Header e footer não competem com o Hero.
 
-Âncoras: O que fazemos · Como trabalhamos · Sobre · Nexo360. CTA e header apontam `#contato`.
+Âncoras: O que fazemos · Como trabalhamos · Sobre · Nexo360. Um único CTA (hero, header, dobra final): WhatsApp.
 
 ## Perguntas em Aberto
 
@@ -205,7 +210,7 @@ Princípio: biografia, oferta e processo aparecem uma vez cada. Vídeos não se 
 - Arquivos 9:16 do baralho do Nexo360 (v1–v4 no palco; ordem/recorte ok?)
 - Vídeos Kaio voltam para a vitrine? Quando, e em qual posição (depois do porquê, depois do Sobre, outra)?
 - O palco do Short do Nexo360 fica 16:9 (faixas) ou vira 9:16, alinhado aos baralhos?
-- Canal de contato (WhatsApp / e-mail) no footer
+- WhatsApp do primary entra no footer, ou o footer fica só âncoras?
 - Analytics entra neste recorte?
 - Os 4 passos da Fase 2 ganham texto de apoio, ou o título sozinho basta?
 - Os rótulos das qualidades no pane escuro (Onde está / O que trava) são o vocabulário certo, ou entram nomes de mercado (posicionamento, oferta, canal)?

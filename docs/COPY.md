@@ -41,11 +41,9 @@ e execução.
 
 **Apoio:** Sou Kaio Henrique Dias — publicitário, professor, consultor empresarial e estrategista de marketing. Minha missão vai além de criar campanhas: é transformar negócios, fortalecer marcas e gerar resultados reais.
 
-Na primeira dobra (padrão Graphy) o apoio **não aparece**. Headline + sub + dois CTAs. O apoio entra depois, nas credenciais ou no Sobre.
+Na primeira dobra (padrão Graphy) o apoio **não aparece**. Headline + sub + um CTA. O apoio entra depois, nas credenciais ou no Sobre.
 
-**CTA principal:** Agendar diagnóstico gratuito
-
-**CTA secundário:** Falar conosco
+**CTA principal:** Agendar diagnóstico gratuito → [WhatsApp](https://wa.me/5555149972044?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito.)
 
 ---
 
@@ -174,7 +172,7 @@ Na página: recorte (lead, três pilares, quatro marcos, missão, propósito, ci
 
 Projeto do Kaio, distinto da consultoria. Texto + bloco próprio de vídeos.
 
-**Headline:** Nexo360 — mais do que um projeto, um ecossistema.
+**Headline:** [wordmark Nexo360] — mais do que um projeto, um ecossistema.
 
 **Abertura:** O Nexo360 nasce com um propósito claro: conectar empresários, profissionais e oportunidades para transformar conhecimento em crescimento real.
 
@@ -196,8 +194,9 @@ Projeto do Kaio, distinto da consultoria. Texto + bloco próprio de vídeos.
 - Unimar
 - Univem
 - FAIP
+- Nexo360
 
-Nexo360 não entra nesta lista: tem seção própria.
+**Destaque:** Nexo360 → [instagram.com/nexoprojeto360](https://www.instagram.com/nexoprojeto360/). Lab Studio Digital → [instagram.com/labstudiod](https://www.instagram.com/labstudiod/).
 
 **Fecho:** Essas conexões fortalecem o ecossistema e ampliam o impacto dos projetos.
 
@@ -209,7 +208,7 @@ Nexo360 não entra nesta lista: tem seção própria.
 
 **Corpo:** Se você quer estruturar seu negócio, posicionar sua marca e crescer de forma estratégica, entre em contato e agende sua reunião de diagnóstico gratuita. Essa é a primeira etapa para transformar seu negócio.
 
-**CTA:** Agendar diagnóstico gratuito
+**CTA:** Agendar diagnóstico gratuito → WhatsApp `wa.me/5555149972044`
 
 **Apoio:** Ou fale diretamente conosco.
 

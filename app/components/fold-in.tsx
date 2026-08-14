@@ -20,6 +20,7 @@ const SELECTOR = [
   ".nexo__deck",
   ".nexo__inner > .video",
   ".partners__intro",
+  ".partners__feature",
   ".partners__marquee",
   ".partners__close",
   ".cta__inner",

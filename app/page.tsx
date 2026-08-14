@@ -37,7 +37,41 @@ const PARTNERS = [
     width: 180,
     height: 56,
   },
+  {
+    src: "/images/parceiras/logo-nexo-1-v1.webp",
+    alt: "Nexo360",
+    width: 220,
+    height: 56,
+    ink: true,
+  },
 ] as const;
+
+function PartnerInstagram({ label, href }: { label: string; href: string }) {
+  return (
+    <a
+      className="partners__ig"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Instagram da ${label}`}
+    >
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <rect
+          x="2.4"
+          y="2.4"
+          width="11.2"
+          height="11.2"
+          rx="3.1"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <circle cx="8" cy="8" r="2.55" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="11.15" cy="4.85" r="0.7" fill="currentColor" />
+      </svg>
+      Instagram
+    </a>
+  );
+}
 
 function PartnersLogos({ labeled }: { labeled?: boolean }) {
   const items = [...PARTNERS, ...PARTNERS];
@@ -95,6 +129,63 @@ export default function HomePage() {
           <CtaButtons />
         </section>
       </div>
+
+      <section className="partners">
+        <div className="partners__inner">
+          <div className="partners__intro">
+            <h2>
+              Nossas <em className="hero__serif">parcerias</em>
+            </h2>
+            <p>
+              <span className="partners__mute">
+                Construímos resultados ao lado de quem também acredita em
+              </span>{" "}
+              crescimento e inovação.
+            </p>
+          </div>
+
+          <ul className="partners__featured">
+            <li className="partners__feature">
+              <Image
+                className="partners__feature-logo"
+                src="/images/parceiras/logo-nexo-1-v1.webp"
+                alt=""
+                width={220}
+                height={56}
+              />
+              <p className="partners__feature-name">Nexo360</p>
+              <PartnerInstagram
+                label="Nexo360"
+                href="https://www.instagram.com/nexoprojeto360/"
+              />
+            </li>
+            <li className="partners__feature">
+              <Image
+                className="partners__feature-logo"
+                src="/images/parceiras/labstudio.webp"
+                alt=""
+                width={200}
+                height={56}
+              />
+              <p className="partners__feature-name">Lab Studio Digital</p>
+              <PartnerInstagram
+                label="Lab Studio Digital"
+                href="https://www.instagram.com/labstudiod/"
+              />
+            </li>
+          </ul>
+        </div>
+        <div className="partners__marquee">
+          <div className="partners__track">
+            <PartnersLogos labeled />
+            <PartnersLogos />
+          </div>
+        </div>
+        <p className="partners__close">
+          Essas conexões fortalecem o ecossistema e ampliam o{" "}
+          <em className="hero__serif">impacto</em> dos projetos.
+        </p>
+      </section>
 
       <section className="offer" id="o-que-fazemos">
         <div className="offer__inner">
@@ -503,7 +594,14 @@ export default function HomePage() {
           </div>
           <div className="nexo__copy">
             <h2>
-              Nexo360 — mais do que um projeto, um{" "}
+              <Image
+                className="nexo__mark"
+                src="/images/parceiras/logo-nexo-1-v1.webp"
+                alt="Nexo360"
+                width={220}
+                height={56}
+              />{" "}
+              — mais do que um projeto, um{" "}
               <em className="hero__serif">ecossistema</em>.
             </h2>
             <p>
@@ -545,32 +643,6 @@ export default function HomePage() {
             title="Nexo360"
           />
         </div>
-      </section>
-
-      <section className="partners">
-        <div className="partners__inner">
-          <div className="partners__intro">
-            <h2>
-              Nossas <em className="hero__serif">parcerias</em>
-            </h2>
-            <p>
-              <span className="partners__mute">
-                Construímos resultados ao lado de quem também acredita em
-              </span>{" "}
-              crescimento e inovação.
-            </p>
-          </div>
-        </div>
-        <div className="partners__marquee">
-          <div className="partners__track">
-            <PartnersLogos labeled />
-            <PartnersLogos />
-          </div>
-        </div>
-        <p className="partners__close">
-          Essas conexões fortalecem o ecossistema e ampliam o{" "}
-          <em className="hero__serif">impacto</em> dos projetos.
-        </p>
       </section>
 
       <section className="cta" id="contato">
